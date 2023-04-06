@@ -78,7 +78,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showErrorMessage("Please select a code snippet");
         return;
       }
-      if (text.length > 500) {
+      if (text.length > 1000) {
         vscode.window.showErrorMessage("Code snippet too large");
         return;
       }
