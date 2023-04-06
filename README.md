@@ -1,5 +1,7 @@
 # codemetry - README
 
+A simple VSCode extension to generate comments for Code Snippets.
+
 ## Command List
 ```
     ctrl + shift + P : codemetry > Generate Code
