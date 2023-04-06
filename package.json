@@ -7,7 +7,7 @@
     "vscode": "^1.77.0"
   },
   "categories": [
-    "Other"
+    "Formatters", "Linters", "Other"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
@@ -53,5 +53,11 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.1"
-  }
+  },
+  "publisher": "msris108",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msris108/codemetry"
+  },
+  "keywords": ["productivity", "chatGPT"]
 }
