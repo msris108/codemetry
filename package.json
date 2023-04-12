@@ -59,5 +59,6 @@
     "type": "git",
     "url": "https://github.com/msris108/codemetry"
   },
+  "icon": "images/logo.png",
   "keywords": ["productivity", "chatGPT"]
 }

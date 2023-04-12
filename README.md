@@ -33,7 +33,7 @@ A simple VSCode extension to generate comments for Code Snippets.
 ### Command List
 
 ```
-    ctrl + shift + P : codemetry > Generate Code
+    ctrl + shift + P : codemetry > Generate Comments
     ctrl + shift + P : codemetry > Set API key
 ```
 

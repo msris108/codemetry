@@ -32,34 +32,23 @@ async function getChatGPTResponse(
   prompt: string,
   key: string
 ): Promise<string> {
-  // Sends a request to the OpenAI API to complete a chat prompt
-const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + key,
+    },
 
-  // Specifies the HTTP request method as POST
-  method: "POST",
-
-  // Sets the HTTP request headers
-  headers: {
-
-    // Specifies the content type as JSON data
-    "Content-Type": "application/json",
-
-    // Adds an authentication token to the request
-    Authorization: "Bearer " + key,
-  },
-
-  // Constructs the request body as a JSON string
-  body: JSON.stringify({
-
-    // Specifies the GPT-3 model to use for the prompt completion
-    model: "gpt-3.5-turbo",
-
-    // Provides the prompt to be completed as a message object
-    messages: [{ role: "user", content: prompt }],
-  }),
-});try {
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: prompt }],
+    }),
+  });
+  vscode.window.showInformationMessage("Generating comments ...")
+  try {
     const jsonResponse: ChatGPTResponse =
       (await response.json()) as ChatGPTResponse;
+      console.log(jsonResponse);
     const chatGPTResponse =
       jsonResponse.choices[0]["message"]["content"].trim();
     return chatGPTResponse;
