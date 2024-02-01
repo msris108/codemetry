@@ -20,6 +20,10 @@
       {
         "command": "codemetry.storeKey",
         "title": "codemetry > Store API key"
+      },
+      {
+        "command": "codemetry.storeDefaultLanguage",
+        "title": "codemetry > Set Default Language"
       } 
     ]
   },
